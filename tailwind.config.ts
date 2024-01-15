@@ -7,5 +7,22 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   plugins: [],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          '500': '#9E6EFE',
+        },
+        dark: {
+          '900': '#2D3748',
+          '800': '#718096',
+          '300': '#F9F9F9',
+        },
+        page: {
+          '500': '#F3F4F8',
+        },
+      },
+    },
+  },
 }
 export default config
