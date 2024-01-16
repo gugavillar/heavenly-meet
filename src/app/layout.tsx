@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
 
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Poppins } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css'
+import { Menu } from '@/components'
+
+const poppins = Poppins({ weight: ['600', '500'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Eventos',
@@ -17,8 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`flex h-screen w-screen flex-col ${inter.className}`}>
-        {children}
+      <body
+        className={`flex h-screen w-screen flex-col bg-page-500 ${poppins.className}`}
+      >
+        <Menu>{children}</Menu>
       </body>
     </html>
   )
