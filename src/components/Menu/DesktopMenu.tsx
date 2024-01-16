@@ -11,7 +11,7 @@ export const DesktopMenu = ({ children }: DesktopMenuProps) => {
     <aside className="hidden max-w-[300px] flex-col rounded-br-3xl rounded-tr-3xl bg-white px-12 py-14 shadow-lg lg:flex">
       <Logo className="text-center" />
       <nav>
-        <ul className="space-y-4">{children}</ul>
+        <menu className="space-y-4">{children}</menu>
       </nav>
     </aside>
   )

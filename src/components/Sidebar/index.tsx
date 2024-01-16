@@ -18,7 +18,7 @@ export const Sidebar = ({ toggle, isOpen, children }: SidebarProps) => {
       <XMarkIcon className="fixed right-6 top-4 h-8 w-8" onClick={toggle} />
       <Logo />
       <nav>
-        <ul>{children}</ul>
+        <menu>{children}</menu>
       </nav>
     </aside>
   )
