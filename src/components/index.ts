@@ -1,3 +1,5 @@
 export * from './Menu'
 export * from './Sidebar'
 export * from './Card'
+export * from './Table'
+export * from './Table/TableHeader'
