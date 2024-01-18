@@ -10,16 +10,25 @@ type ItemMenuProps = {
     label: string
     icon: (props: ComponentPropsWithRef<'svg'>) => ReactNode
   }>
+  handleToggle?: () => void
 }
 
 type MenuLinkProps = ItemMenuProps['itens'][number] & {
   isActive: boolean
+  handleToggle?: () => void
 }
 
-const MenuLink = ({ icon, label, url, isActive }: MenuLinkProps) => {
+const MenuLink = ({
+  icon,
+  label,
+  url,
+  isActive,
+  handleToggle,
+}: MenuLinkProps) => {
   return (
     <Link
       href={url}
+      {...(handleToggle && { onClick: handleToggle })}
       className={twJoin(
         'flex h-14 w-48 items-center gap-4 rounded-md p-4',
         isActive
@@ -48,13 +57,20 @@ const MenuLink = ({ icon, label, url, isActive }: MenuLinkProps) => {
   )
 }
 
-export const ItemMenu = ({ itens }: ItemMenuProps) => {
+export const ItemMenu = ({ itens, handleToggle }: ItemMenuProps) => {
   const path = usePathname()
 
   if (!itens?.length) return null
 
   return itens.map((item) => {
     const isActive = path === item.url
-    return <MenuLink key={item.label} isActive={isActive} {...item} />
+    return (
+      <MenuLink
+        key={item.label}
+        isActive={isActive}
+        {...(handleToggle && { handleToggle })}
+        {...item}
+      />
+    )
   })
 }

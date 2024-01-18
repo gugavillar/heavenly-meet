@@ -1,16 +1,15 @@
-import { ReactNode } from 'react'
+import { MENU } from './constants'
+import { DesktopMenu } from './DesktopMenu'
+import { ItemMenu } from './ItemMenu'
+import { MobileContainer } from './MobileContainer'
 
-import { Wrapper } from './Wrapper'
-
-type MenuProps = {
-  children: ReactNode
-}
-
-export const Menu = ({ children }: MenuProps) => {
+export const Menu = () => {
   return (
-    <main className="flex h-screen flex-1 flex-col lg:flex-row">
-      <Wrapper />
-      <section className="flex-1 px-5 lg:px-16 lg:py-14">{children}</section>
-    </main>
+    <>
+      <MobileContainer />
+      <DesktopMenu>
+        <ItemMenu itens={MENU} />
+      </DesktopMenu>
+    </>
   )
 }

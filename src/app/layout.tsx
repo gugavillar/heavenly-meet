@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 
 import './globals.css'
-import { Menu } from '@/components'
+import { Container, Menu } from '@/components'
 
 const poppins = Poppins({ weight: ['600', '500'], subsets: ['latin'] })
 
@@ -22,7 +22,10 @@ export default function RootLayout({
       <body
         className={`flex h-screen w-screen flex-col bg-page-500 ${poppins.className}`}
       >
-        <Menu>{children}</Menu>
+        <main className="flex h-screen flex-1 flex-col lg:flex-row">
+          <Menu />
+          <Container>{children}</Container>
+        </main>
       </body>
     </html>
   )
