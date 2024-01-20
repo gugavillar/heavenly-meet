@@ -18,7 +18,7 @@ export const MENU = [
     ),
   },
   {
-    url: '/pessoas',
+    url: '/inscritos',
     label: 'Inscritos',
     icon: (props: ComponentPropsWithRef<'svg'>) => <UserIcon {...props} />,
   },
