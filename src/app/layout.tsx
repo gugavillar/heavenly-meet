@@ -5,7 +5,7 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 import { Container, Menu } from '@/components'
 
-const poppins = Poppins({ weight: ['600', '500'], subsets: ['latin'] })
+const poppins = Poppins({ weight: ['600', '500', '300'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Eventos',
