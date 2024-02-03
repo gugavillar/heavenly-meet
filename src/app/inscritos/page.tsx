@@ -18,6 +18,27 @@ const TABLE_BODY = [
     phone: '(11) 99999-9999',
     city: 'New York, NY',
   },
+  {
+    id: '2',
+    name: 'John Doe',
+    birthdate: '01/01/2000',
+    phone: '(11) 99999-9999',
+    city: 'New York, NY',
+  },
+  {
+    id: '3',
+    name: 'John Doe',
+    birthdate: '01/01/2000',
+    phone: '(11) 99999-9999',
+    city: 'New York, NY',
+  },
+  {
+    id: '4',
+    name: 'John Doe',
+    birthdate: '01/01/2000',
+    phone: '(11) 99999-9999',
+    city: 'New York, NY',
+  },
 ]
 
 // TODO remover quando tiver integração
