@@ -16,10 +16,11 @@ export const FieldContainer = ({
 }: FieldContainerProps) => {
   return (
     <div
+      data-testid="field-container"
       className={twMerge('flex w-full flex-col space-y-1', className)}
       {...props}
     >
-      <label>{label}</label>
+      {label ? <label>{label}</label> : null}
       {children}
       {error ? (
         <span className="flex items-center gap-1 text-sm font-light text-red-500">
