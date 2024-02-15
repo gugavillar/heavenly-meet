@@ -10,6 +10,9 @@ const config: Config = {
 
   theme: {
     extend: {
+      backgroundColor: {
+        'rgb-230-34-34': 'rgb(230, 34, 34)',
+      },
       colors: {
         brand: {
           '500': '#9E6EFE',

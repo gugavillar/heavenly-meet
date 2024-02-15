@@ -1,4 +1,11 @@
-import { Card, FieldContainer, Select, Table, TableHeader } from '@/components'
+import {
+  Card,
+  FieldContainer,
+  Select,
+  Table,
+  TableHeader,
+  Button,
+} from '@/components'
 import { TableBody } from '@/components/Table/TableBody'
 
 // TODO remover quando tiver integração
@@ -61,6 +68,26 @@ export default function RegisteredPage() {
           />
         </FieldContainer>
       </div>
+      <Button
+        disabled
+        className=" group relative mb-3 flex items-center bg-rgb-230-34-34 transition duration-700 hover:bg-[rgba(255,54,54,1)] hover:text-transparent"
+      >
+        <span className="  translate-x-[35px] transform text-sm font-bold text-white transition duration-700 group-hover:opacity-0">
+          Delete
+        </span>
+        <span className=" absolute flex h-10 w-10 translate-x-[110px] transform items-center justify-center border-l border-solid border-[#c41b1b] transition duration-700 group-hover:w-40 group-hover:-translate-x-0  group-hover:border-l-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#eee"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            className=""
+          >
+            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+          </svg>
+        </span>
+      </Button>
       <Card>
         <Table headerTable={<TableHeader tableHeaderData={TABLE_HEADER} />}>
           <TableBody
