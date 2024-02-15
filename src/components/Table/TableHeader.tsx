@@ -14,7 +14,11 @@ export const TableHeader = ({ tableHeaderData }: TableHeaderProps) => {
         {tableHeaderData.map(({ label }) => {
           const key = nanoid()
           return (
-            <th key={key} className="p-4 text-left">
+            <th
+              key={key}
+              className="p-4 text-left"
+              data-testid="table-header-label"
+            >
               {label}
             </th>
           )
